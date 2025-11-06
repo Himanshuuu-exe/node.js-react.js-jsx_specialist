@@ -1,0 +1,35 @@
+-we discuesed why only 1024 or 4096 numbers are used in buffers by engineers
+
+-work of custom server started
+    -2 chije hoti hai-->as ham framework bana rahe hai to hamko client side or server side dono 
+    ki functionalty dena hai developer ko
+
+    1st-client side resourses jese ki koi web page abc.html kik request aae usko client side 
+    dispatch kar dege, ese a.css , imgae file sab client side jaengi
+
+    2nd server side resourses jese db ya file se data load ya save karna
+
+    -private folder bana ke server side resourses usme rakh dege taki client side par wo show ya use 
+    nahi ho, or ducumentation me ye likh dege ki developer ko server resourses ko private naam ke
+    folder me rakhna hai hamesha
+    agar /private request aai to ham kuch bhejege hi nahi i.e ignore kar dege
+
+    -or ek conf.json me paths ke against server side resourses rakh dege as we do in users.data in 
+    cli chat
+    jese "paths"{
+        [
+           { "path" : "/kalu" , "resourse" : "abc.js"  }
+           {                                           }
+           ese....
+        ]
+    }
+    yaha /kalu client se aya hamne uske liye abc.js chala diya ab client side pr same name as server
+    pr bhi same nahi hoga but functionalty usi ki hogi
+
+    -ab ham framework creator hai 
+
+    ham client se data request leke parse karege or server side par dege or same server se reponse 
+    khud parse karke dege, unko parse karne ki dikkat nahi direct response me dalke ke bhej do 
+    client side
+
+    bich ka kaam hamne easy kar diya...
