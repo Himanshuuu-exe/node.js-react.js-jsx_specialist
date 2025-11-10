@@ -1,0 +1,75 @@
+const qs=require('querystring');
+
+exports.parseRequest=function(data,mappings)
+{
+    var request={}
+    var str=data.toString();
+    console.log("------------------------");
+    console.log(str);
+    console.log("------------------------");          
+    var splits=str.split('\n');
+    var firstLine=splits[0];
+    var w=firstLine.split(" ");
+    request.error=0;
+    request.method=w[0].toUpperCase();
+    request.queryString=null;
+    request.data={};
+
+    if(request.method=="GET")
+    {
+        var i=w[1].indexOf("?");
+        if(i!=-1)
+        {
+            request.queryString=w[1].substring(i+1);
+            request.data=JSON.parse(JSON.stringify(qs.decode(request.queryString)));
+
+            w[1]=w[1].substring(0,i);
+            
+            console.log(request.queryString);
+            console.log(request.data);
+        }
+    }
+    
+    if(request.method=="POST");
+    {
+        var lastLine=splits[splits.length-1];
+        request.queryString=lastLine;
+        request.data=JSON.parse(JSON.stringify(qs.decode(request.queryString)));
+    }
+    
+
+   
+    if(w[1]=='/')
+    {
+        request.resource="index.html";
+        request.isClientSideTechnologyResources=true;
+        return request;
+    }
+
+    if(w[1]=="/private" || w[1]=="/private/")   ///i did
+    {
+        request.error=404;
+        request.resource=w[1].substring(1)
+        request.isClientSideTechnologyResources=true;
+        return request;
+    }
+
+    else
+    {
+        var e=0;
+        while(e<mappings.paths.length)
+        {
+            if(mappings.paths[e].path==w[1])
+            {
+                request.resource=mappings.paths[e].resource;
+                request.isClientSideTechnologyResources=false;
+                return request;
+            }
+            e++;
+        }
+        request.resource=w[1].substring(1);
+        request.isClientSideTechnologyResources=true;
+        return request;
+    }
+}
+
