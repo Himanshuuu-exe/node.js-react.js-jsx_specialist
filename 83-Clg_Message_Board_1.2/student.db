@@ -1,0 +1,11 @@
+{
+    "students":[
+        {"rollNumber":101,"name":"Suresh Gupta"},
+        {"rollNumber":102,"name":"Mahesh Sinha"},
+        {"rollNumber":103,"name":"Rupesh Solanki"},
+        {"rollNumber":104,"name":"Bobby Dev"},
+        {"rollNumber":105,"name":"Amit Shastri"},
+        {"rollNumber":106,"name":"Sourabh Gupta"},
+        {"rollNumber":107,"name":"Chetan Joshi"}
+    ]
+}
