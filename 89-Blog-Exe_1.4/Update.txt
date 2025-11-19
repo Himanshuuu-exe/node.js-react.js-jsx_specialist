@@ -1,3 +1,4 @@
-Added blogController with CRUD logic.
+Added blogRoutes with CRUD endpoints.
 
 Updated the main folder...
+
