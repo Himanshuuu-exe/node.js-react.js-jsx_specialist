@@ -1,4 +1,4 @@
-Added index.ejs to display all blogs.
-
+Added details.ejs with delete flow UI.
 
 Updated the main folder...
+
