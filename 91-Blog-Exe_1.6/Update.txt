@@ -1,0 +1,4 @@
+Added index.ejs to display all blogs.
+
+
+Updated the main folder...
