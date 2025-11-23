@@ -1,0 +1,4 @@
+Implemented delete handler + frontend script.
+
+
+Updated the main folder...
