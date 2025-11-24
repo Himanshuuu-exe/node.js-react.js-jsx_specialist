@@ -1,0 +1,3 @@
+Added about page template.
+
+Updated the main folder...
