@@ -1,0 +1,4 @@
+Added partials: head/nav/footer.
+
+
+Updated the main folder...
