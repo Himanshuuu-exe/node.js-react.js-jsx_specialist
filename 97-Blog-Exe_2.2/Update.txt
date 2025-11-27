@@ -1,0 +1,3 @@
+Added 404.ejs + fallback route.
+
+Updated the main folder...
