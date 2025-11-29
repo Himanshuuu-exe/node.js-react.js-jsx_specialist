@@ -1,0 +1,3 @@
+Added all remaining files + final project polish.
+
+Updated the main folder Blog-Exe_1.1
